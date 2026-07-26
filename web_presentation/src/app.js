@@ -39,6 +39,18 @@ export default class App {
         ]
       },
       {
+        id: 'gallery',
+        title: '個人作品',
+        type: 'gallery',
+        images: [
+          '截圖 2026-07-26 下午6.58.14.png',
+          '截圖 2026-07-26 下午6.58.43.png',
+          '截圖 2026-07-26 下午6.59.03.png',
+          '截圖 2026-07-26 下午6.59.15.png',
+          '截圖 2026-07-26 下午6.59.27.png'
+        ]
+      },
+      {
         id: 'context',
         title: '歷史背景',
         content: [
@@ -168,6 +180,19 @@ export default class App {
             '<ul class="story-list">' +
               data.content.map(item => '<li>' + item + '</li>').join('') +
             '</ul>' +
+          '</section>'
+        );
+      case 'gallery':
+        return (
+          '<section id="' + data.id + '" class="story-section">' +
+            '<h2>' + data.title + '</h2>' +
+            '<div class="gallery-grid">' +
+              data.images.map((name, index) => (
+                '<figure class="gallery-item">' +
+                  '<img class="gallery-image" src="' + encodeURI('/images/' + name) + '" alt="作品 ' + (index + 1) + '" loading="lazy" />' +
+                '</figure>'
+              )).join('') +
+            '</div>' +
           '</section>'
         );
       case 'timeline':
