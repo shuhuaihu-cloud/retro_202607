@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+section {
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}

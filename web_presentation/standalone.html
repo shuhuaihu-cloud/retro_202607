@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上海近代住宅建築：1930–1940</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter & Noto Serif TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Serif+TC:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'background': '#F8F6F2',
+            'text': '#222222',
+            'secondary-text': '#777777',
+            'accent': '#26473D',
+            'gold': '#A78C63',
+            'divider': '#D8D4CF',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+            'serif': ['"Noto Serif TC"', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      background-color: #F8F6F2;
+      color: #222222;
+      font-family: 'Noto Serif TC', serif;
+      scroll-behavior: smooth;
+    }
+    .font-sans-title {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    /* Simple fade-in animation on scroll */
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="selection:bg-accent selection:text-background">
+
+  <!-- Sticky Navigation -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-[#F8F6F2]/80 backdrop-blur-md border-b border-divider">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <span class="font-sans-title font-bold tracking-widest text-sm text-accent uppercase">SHANGHAI MODERN</span>
+      <div class="hidden md:flex items-center space-x-8 font-sans-title text-xs tracking-wider text-secondary-text">
+        <a href="#cover" class="hover:text-accent transition-colors">封面</a>
+        <a href="#context" class="hover:text-accent transition-colors">歷史背景</a>
+        <a href="#timeline" class="hover:text-accent transition-colors">住宅演變</a>
+        <a href="#sun-ke-villa" class="hover:text-accent transition-colors">孫科別墅</a>
+        <a href="#rong-zhai" class="hover:text-accent transition-colors">榮宅</a>
+        <a href="#wu-tongwen-residence" class="hover:text-accent transition-colors">綠房子</a>
+        <a href="#bund-origin" class="hover:text-accent transition-colors">外灘源</a>
+        <a href="#comparison" class="hover:text-accent transition-colors">對比分析</a>
+        <a href="#conclusion" class="hover:text-accent transition-colors">結語</a>
+      </div>
+    </div>
+  </nav>
+
+  <div id="app" class="pt-20">
+    <!-- Cover / Hero Section -->
+    <section id="cover" class="h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(#D8D4CF_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+      <div class="z-10 max-w-4xl">
+        <p class="font-sans-title tracking-[0.25em] text-gold uppercase text-sm md:text-base mb-6 font-semibold">Architecture Exhibition</p>
+        <h1 class="text-4xl md:text-7xl font-light tracking-tight text-accent mb-6 leading-tight">
+          上海近代住宅：<span class="font-normal block mt-2">1930–1940</span>
+        </h1>
+        <div class="w-16 h-[1px] bg-gold mx-auto my-8"></div>
+        <p class="text-lg md:text-2xl font-light text-secondary-text tracking-wide max-w-2xl mx-auto leading-relaxed">
+          上海摩登別墅與現代主義的萌芽
+        </p>
+        <p class="text-sm text-secondary-text/80 mt-16 font-sans-title tracking-widest">SCROLL TO ENTER</p>
+        <div class="animate-bounce mt-4 text-gold">↓</div>
+      </div>
+    </section>
+
+    <!-- Narrative Intro Section -->
+    <section class="max-w-4xl mx-auto px-6 py-32 text-center fade-in-section">
+      <p class="text-gold font-semibold font-sans-title tracking-widest text-xs uppercase mb-4">The Narrative</p>
+      <blockquote class="text-2xl md:text-3xl font-light text-accent leading-relaxed mb-8 italic">
+        「這不只是關於三座老洋房的故事，而是上海精英住宅建築在民國時期，如何從折衷主義與新古典傳統，逐步演變並走向現代主義的歷史軌跡。」
+      </blockquote>
+      <div class="w-12 h-[1px] bg-divider mx-auto"></div>
+    </section>
+
+    <!-- Historical Context -->
+    <section id="context" class="max-w-7xl mx-auto px-6 py-24 border-t border-divider fade-in-section">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-4">
+          <p class="text-gold font-semibold font-sans-title tracking-widest text-xs uppercase mb-2">Chapter 01</p>
+          <h2 class="text-3xl md:text-4xl font-normal text-accent tracking-tight leading-tight">歷史背景</h2>
+          <p class="text-secondary-text mt-4 text-sm font-sans-title leading-relaxed">
+            1930年代的上海，作為遠東第一大都市，匯聚了全球的資本與先鋒思潮。租界的劃分、都市化的擴張，以及新興華商精英階層的崛起，共同催生了對海派花園洋房與摩登別墅的極大需求。
+          </p>
+        </div>
+        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="border-l-2 border-gold pl-6 py-2">
+            <h3 class="text-xl font-semibold mb-2">上海的迅速崛起</h3>
+            <p class="text-secondary-text text-base">通商開埠後，上海迅速由江南水鄉小鎮蛻變為國際金融與貿易樞紐。</p>
+          </div>
+          <div class="border-l-2 border-gold pl-6 py-2">
+            <h3 class="text-xl font-semibold mb-2">租界劃分與城市擴張</h3>
+            <p class="text-secondary-text text-base">法租界與公共租界的西區擴展，開闢了低密度、綠意盎然的高級別墅住宅區。</p>
+          </div>
+          <div class="border-l-2 border-gold pl-6 py-2">
+            <h3 class="text-xl font-semibold mb-2">都市化與精英階層興起</h3>
+            <p class="text-secondary-text text-base">新興的中產階級、華商買辦與政治精英，成為現代化洋房與高級公寓的擁護者。</p>
+          </div>
+          <div class="border-l-2 border-gold pl-6 py-2">
+            <h3 class="text-xl font-semibold mb-2">工業資本的累積</h3>
+            <p class="text-secondary-text text-base">民族工業的蓬勃發展積累了雄厚資金，為極致奢華與先鋒實驗性的別墅提供了物質基礎。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline of Architectural Evolution -->
+    <section id="timeline" class="bg-[#F2EFE9] py-24 border-t border-b border-divider overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 fade-in-section">
+          <p class="text-gold font-semibold font-sans-title tracking-widest text-xs uppercase mb-2">Evolution Timeline</p>
+          <h2 class="text-3xl md:text-4xl font-normal text-accent tracking-tight">近代住宅演變時間軸</h2>
+        </div>
+        
+        <div class="relative wrap overflow-hidden p-10 h-full">
+          <div class="border-2-2 absolute border-opacity-20 border-accent h-full border" style="left: 50%"></div>
+          
+          <!-- Timeline Item 1 -->
+          <div class="mb-8 flex justify-between items-center w-full right-timeline fade-in-section">
+            <div class="order-1 w-5/12"></div>
+            <div class="z-20 flex items-center order-1 bg-accent shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto font-semibold text-lg text-background font-sans-title">1</h1>
+            </div>
+            <div class="order-1 bg-background rounded-lg shadow-sm w-5/12 px-6 py-4 border border-divider">
+              <span class="text-gold font-sans-title font-semibold text-xs tracking-wider">晚清至民國初期</span>
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">傳統江南民居與石庫門早期</h3>
+              <p class="text-sm leading-snug text-secondary-text">
+                以傳統木結構為基礎，逐步融入西方券廊樣式，誕生了上海特有的「石庫門」里弄住宅，展現了早期中西文化的初步碰撞。
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="mb-8 flex justify-between items-center w-full left-timeline flex-row-reverse fade-in-section">
+            <div class="order-1 w-5/12"></div>
+            <div class="z-20 flex items-center order-1 bg-accent shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto font-semibold text-lg text-background font-sans-title">2</h1>
+            </div>
+            <div class="order-1 bg-background rounded-lg shadow-sm w-5/12 px-6 py-4 border border-divider">
+              <span class="text-gold font-sans-title font-semibold text-xs tracking-wider">1910s–1920s</span>
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">折衷主義與古典別墅的引入</h3>
+              <p class="text-sm leading-snug text-secondary-text">
+                西方古典主義、文藝復興式、法國古典主義及各式異國情調（如西班牙風、英國鄉村風）洋房興起，風格百花齊放，追求裝飾性與身份象徵。
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="mb-8 flex justify-between items-center w-full right-timeline fade-in-section">
+            <div class="order-1 w-5/12"></div>
+            <div class="z-20 flex items-center order-1 bg-accent shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto font-semibold text-lg text-background font-sans-title">3</h1>
+            </div>
+            <div class="order-1 bg-background rounded-lg shadow-sm w-5/12 px-6 py-4 border border-divider">
+              <span class="text-gold font-sans-title font-semibold text-xs tracking-wider">1930s</span>
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">裝飾藝術（Art Deco）與摩登潮</h3>
+              <p class="text-sm leading-snug text-secondary-text">
+                幾何線條、放射狀裝飾與高聳感成為主流。住宅設計開始簡化繁複裝飾，轉而追求現代流線型與時尚都市感。
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="mb-8 flex justify-between items-center w-full left-timeline flex-row-reverse fade-in-section">
+            <div class="order-1 w-5/12"></div>
+            <div class="z-20 flex items-center order-1 bg-accent shadow-xl w-8 h-8 rounded-full">
+              <h1 class="mx-auto font-semibold text-lg text-background font-sans-title">4</h1>
+            </div>
+            <div class="order-1 bg-background rounded-lg shadow-sm w-5/12 px-6 py-4 border border-divider">
+              <span class="text-gold font-sans-title font-semibold text-xs tracking-wider">1930s末–1940s</span>
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">現代主義的極致實踐</h3>
+              <p class="text-sm leading-snug text-secondary-text">
+                摒棄一切多餘裝飾，強調「功能第一」，運用鋼筋混凝土、大面橫向舷窗、流線形線條、鋼窗等現代建材，邁入純粹現代主義殿堂。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study 1: Sun Ke Villa -->
+    <section id="sun-ke-villa" class="max-w-7xl mx-auto px-6 py-32 border-b border-divider fade-in-section">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <p class="text-gold font-semibold font-sans-title tracking-widest text-xs uppercase mb-2">Case Study 01</p>
+          <h2 class="text-4xl md:text-5xl font-light text-accent tracking-tight leading-tight mb-4">孫科別墅</h2>
+          <p class="text-sm font-sans-title text-gold tracking-widest mb-8 font-medium">SUN KE VILLA</p>
+          
+          <div class="space-y-6 text-base leading-relaxed text-secondary-text">
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">歷史背景</span>
+              <p>原為傳奇建築師鄔達克自建住宅，後因孫科（孫中山之子）慷慨相助解其財務之急，鄔氏遂將此別墅低價轉讓予孫科，傳為佳話。</p>
+            </div>
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">建築師</span>
+              <p>鄔達克 (László Hudec) —— 近代上海最具影響力的匈牙利籍先鋒建築大師。</p>
+            </div>
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">規劃與立面</span>
+              <p>融合了西班牙同樂會式住宅風格。立面極富折衷主義色彩，巴洛克式山牆、精緻的古典拱門與煙囪交織出豐富的視覺層次。</p>
+            </div>
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">空間與細部</span>
+              <p>擁有極富海派韻味的大型花園。室內大量採用彩色玻璃、洗石子外牆、螺旋柱與精緻的木雕護牆板，展現古典與西班牙風格的過渡美學。</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="aspect-[4/3] bg-[#E8E4DD] rounded-sm relative overflow-hidden shadow-md flex items-center justify-center border border-divider">
+            <div class="text-center p-8">
+              <span class="text-xs font-sans-title text-gold tracking-widest block mb-2">ARCHITECTURAL SKETCH</span>
+              <h4 class="font-sans-title text-lg text-accent font-semibold mb-4">孫科別墅 立面示意</h4>
+              <p class="text-xs text-secondary-text max-w-sm mx-auto leading-relaxed">
+                尖拱窗、西班牙式瓦片屋頂、精緻洗石子牆面，呈現溫暖迷人的西班牙鄉村與折衷主義情調。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study 2: Rong Zhai -->
+    <section id="rong-zhai" class="max-w-7xl mx-auto px-6 py-32 border-b border-divider fade-in-section">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 lg:order-2">
+          <p class="text-gold font-semibold font-sans-title tracking-widest text-xs uppercase mb-2">Case Study 02</p>
+          <h2 class="text-4xl md:text-5xl font-light text-accent tracking-tight leading-tight mb-4">榮宅</h2>
+          <p class="text-sm font-sans-title text-gold tracking-widest mb-8 font-medium">RONG ZHAI</p>
+          
+          <div class="space-y-6 text-base leading-relaxed text-secondary-text">
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">歷史背景</span>
+              <p>「麵粉大王」與「棉紗大王」榮宗敬（著名的紅色資本家）的私人住宅，是上海灘保存最為完好的頂級大洋房之一。</p>
+            </div>
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">建築風格</span>
+              <p>極致優雅的法國古典主義風格，並完美融合了折衷主義。呈現出民國時期頂級華商對精緻西方生活方式的追求。</p>
+            </div>
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">空間格局</span>
+              <p>位於法租界核心地段，擁有巨大的花園草坪。室內設有極其奢華的彩色拼花大玻璃天頂宴會廳、高聳的護牆雕刻與幾何鑄鐵格柵。</p>
+            </div>
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">工藝細節</span>
+              <p>大量運用彩色馬賽克、雕刻精美的紅木旋轉樓梯、以及歐式彩繪浮雕玻璃，堪稱近代中西工藝大師合作的藝術傑作。</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 lg:order-1">
+          <div class="aspect-[4/3] bg-[#E8E4DD] rounded-sm relative overflow-hidden shadow-md flex items-center justify-center border border-divider">
+            <div class="text-center p-8">
+              <span class="text-xs font-sans-title text-gold tracking-widest block mb-2">ARCHITECTURAL SKETCH</span>
+              <h4 class="font-sans-title text-lg text-accent font-semibold mb-4">榮宅 法式古典天頂</h4>
+              <p class="text-xs text-secondary-text max-w-sm mx-auto leading-relaxed">
+                巨型彩繪玻璃天窗、雕花梁柱、比例嚴謹的法式雙對稱樓梯與愛奧尼克柱式，流露法國新古典主義之尊貴。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study 3: Wu Tongwen Residence -->
+    <section id="wu-tongwen-residence" class="max-w-7xl mx-auto px-6 py-32 border-b border-divider fade-in-section">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <p class="text-gold font-semibold font-sans-title tracking-widest text-xs uppercase mb-2">Case Study 03</p>
+          <h2 class="text-4xl md:text-5xl font-light text-accent tracking-tight leading-tight mb-4">吳同文住宅（綠房子）</h2>
+          <p class="text-sm font-sans-title text-gold tracking-widest mb-8 font-medium">WU TONGWEN RESIDENCE / GREEN HOUSE</p>
+          
+          <div class="space-y-6 text-base leading-relaxed text-secondary-text">
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">歷史背景與傳奇</span>
+              <p>「顏料大王」吳同文因販售綠色顏料致富，極度鍾愛綠色。他要求鄔達克為其設計一座「超越時代、百年不落伍」的現代別墅。這座建築也是鄔達克在上海的收官告別之作。</p>
+            </div>
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">現代主義的巔峰</span>
+              <p>完全摒棄傳統裝飾，採用流線型現代主義（Streamline Moderne）。巨大的弧形陽台、橫向長條舷窗，與淡綠色釉面面磚交相輝映。</p>
+            </div>
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">超越時代的設備</span>
+              <p>上海首座安裝私人奧的斯（Otis）弧形玻璃電梯的住宅。設有最先進的中央暖氣、日光室玻璃穹頂、室內吧台與流線起居空間。</p>
+            </div>
+            <div>
+              <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">空間極致利用</span>
+              <p>完美適應臨街的奇特三角地塊，將花園與露台完美立體化結合，被當時譽為「遠東第一豪宅」。</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="aspect-[4/3] bg-[#E8E4DD] rounded-sm relative overflow-hidden shadow-md flex items-center justify-center border border-divider">
+            <div class="text-center p-8">
+              <span class="text-xs font-sans-title text-gold tracking-widest block mb-2">ARCHITECTURAL SKETCH</span>
+              <h4 class="font-sans-title text-lg text-accent font-semibold mb-4">綠房子 現代流線立面</h4>
+              <p class="text-xs text-secondary-text max-w-sm mx-auto leading-relaxed">
+                淡綠色釉面磚牆面、水平長窗、圓弧形露台、鋼管欄杆與透明玻璃電梯井，徹底實踐包浩斯功能美學。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study 4: The Bund Origin -->
+    <section id="bund-origin" class="bg-[#F2EFE9] border-t border-b border-divider py-32 fade-in-section">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 lg:order-2">
+                  <div class="aspect-[4/3] bg-[#E8E4DD] rounded-sm relative overflow-hidden shadow-md flex items-center justify-center border border-divider">
+                    <div class="text-center p-8">
+                      <span class="text-xs font-sans-title text-gold tracking-widest block mb-2">ARCHITECTURAL SKETCH</span>
+                      <h4 class="font-sans-title text-lg text-accent font-semibold mb-4">外灘源 建築群組</h4>
+                      <p class="text-xs text-secondary-text max-w-sm mx-auto leading-relaxed">
+                        原英國領事館的紅磚維多利亞風格，與周邊的新古典主義、裝飾藝術風格建築交相輝映，是上海近代歷史的縮影。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="lg:col-span-5 lg:order-1">
+                    <p class="text-gold font-semibold font-sans-title tracking-widest text-xs uppercase mb-2">Case Study 04</p>
+                    <h2 class="text-4xl md:text-5xl font-light text-accent tracking-tight leading-tight mb-4">外灘源</h2>
+                    <p class="text-sm font-sans-title text-gold tracking-widest mb-8 font-medium">THE BUND ORIGIN</p>
+                    
+                    <div class="space-y-6 text-base leading-relaxed text-secondary-text">
+                        <div>
+                            <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">歷史起點</span>
+                            <p>此地是外灘「萬國建築博覽會」的發源地，擁有上海現存最早的領事館建築——原英國領事館。是外灘歷史的開端。</p>
+                        </div>
+                        <div>
+                            <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">風格融合的典範</span>
+                            <p>區域內不僅有維多利亞式、新古典主義等歷史風格建築，也見證了裝飾藝術（Art Deco）的興起，是建築風格演變的活化石。</p>
+                        </div>
+                        <div>
+                            <span class="font-bold text-accent font-sans-title text-sm uppercase block mb-1">功能變遷與活化</span>
+                            <p>從最初的領事館、銀行、總會，到今日轉變為高級餐飲、美術館與精品酒店。展現了歷史建築在當代都市中的再生與適應性再利用。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparative Analysis Matrix -->
+    <section id="comparison" class="max-w-7xl mx-auto px-6 py-24 fade-in-section">
+      <div class="text-center mb-16">
+        <p class="text-gold font-semibold font-sans-title tracking-widest text-xs uppercase mb-2">Comparative Analysis</p>
+        <h2 class="text-3xl md:text-4xl font-normal text-accent tracking-tight">案例對比分析</h2>
+      </div>
+      
+      <div class="overflow-x-auto shadow-sm border border-divider rounded-lg">
+        <table class="min-w-full bg-white divide-y divide-divider">
+          <thead>
+            <tr class="bg-[#F2EFE9]/50">
+              <th class="py-4 px-6 text-left text-xs font-sans-title font-semibold uppercase text-accent tracking-wider">分析維度</th>
+              <th class="py-4 px-6 text-center text-xs font-sans-title font-semibold uppercase text-accent tracking-wider">孫科別墅 (1934)</th>
+              <th class="py-4 px-6 text-center text-xs font-sans-title font-semibold uppercase text-accent tracking-wider">榮宅 (1918)</th>
+              <th class="py-4 px-6 text-center text-xs font-sans-title font-semibold uppercase text-accent tracking-wider">吳同文住宅 (1938)</th>
+              <th class="py-4 px-6 text-center text-xs font-sans-title font-semibold uppercase text-accent tracking-wider">外灘源 (1873起)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-divider font-serif">
+            <tr>
+              <td class="py-4 px-6 font-semibold bg-[#F2EFE9]/10 text-sm">建築師</td>
+              <td class="py-4 px-6 text-center text-sm">鄔達克</td>
+              <td class="py-4 px-6 text-center text-sm">陳椿江等</td>
+              <td class="py-4 px-6 text-center text-sm">鄔達克</td>
+              <td class="py-4 px-6 text-center text-sm">多位西方建築師</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-semibold bg-[#F2EFE9]/10 text-sm">業主背景</td>
+              <td class="py-4 px-6 text-center text-sm">政治名流</td>
+              <td class="py-4 px-6 text-center text-sm">華商實業家</td>
+              <td class="py-4 px-6 text-center text-sm">華商精英</td>
+              <td class="py-4 px-6 text-center text-sm">外國領事館、銀行</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-semibold bg-[#F2EFE9]/10 text-sm">主導風格</td>
+              <td class="py-4 px-6 text-center text-sm">折衷主義 / 西班牙風</td>
+              <td class="py-4 px-6 text-center text-sm">法國古典主義</td>
+              <td class="py-4 px-6 text-center text-sm">流線型現代主義</td>
+              <td class="py-4 px-6 text-center text-sm">維多利亞、新古典、裝飾藝術</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-semibold bg-[#F2EFE9]/10 text-sm">主要功能</td>
+              <td class="py-4 px-6 text-center text-sm">私人住宅</td>
+              <td class="py-4 px-6 text-center text-sm">私人住宅 / 社交</td>
+              <td class="py-4 px-6 text-center text-sm">私人住宅</td>
+              <td class="py-4 px-6 text-center text-sm">公共、商業、辦公</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-semibold bg-[#F2EFE9]/10 text-sm">現代化活化</td>
+              <td class="py-4 px-6 text-center text-sm">展覽、公共開放</td>
+              <td class="py-4 px-6 text-center text-sm">品牌活動、展覽</td>
+              <td class="py-4 px-6 text-center text-sm">私人會所</td>
+              <td class="py-4 px-6 text-center text-sm">高端商業、餐飲、酒店</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Style Evolution Path -->
+    <section class="bg-accent text-background py-24 border-t border-divider fade-in-section">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-gold font-semibold font-sans-title tracking-widest text-xs uppercase mb-2">Evolution Path</p>
+        <h2 class="text-3xl md:text-4xl font-normal tracking-tight mb-12 text-[#F8F6F2]">風格演進軌跡</h2>
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4">
+          <div class="flex-1">
+            <h4 class="text-xl font-semibold text-gold mb-2">折衷主義</h4>
+            <p class="text-sm text-background/80 leading-relaxed">自由組合多種古典歷史風格（如榮宅、孫科別墅）。注重古典裝飾細節與歷史意象的堆砌。</p>
+          </div>
+          <div class="text-gold text-2xl hidden md:block">→</div>
+          <div class="flex-1">
+            <h4 class="text-xl font-semibold text-gold mb-2">裝飾藝術</h4>
+            <p class="text-sm text-background/80 leading-relaxed">簡化古典裝飾，導入幾何、流線形線條與工業感。是古典走向現代的中介過渡期。</p>
+          </div>
+          <div class="text-gold text-2xl hidden md:block">→</div>
+          <div class="flex-1">
+            <h4 class="text-xl font-semibold text-gold mb-2">現代主義</h4>
+            <p class="text-sm text-background/80 leading-relaxed">徹底摒棄裝飾。機能決定形式，運用工業建材（鋼筋混凝土、鋼、玻璃），追求純粹空間效率（如綠房子）。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="max-w-4xl mx-auto px-6 py-32 text-center fade-in-section">
+      <p class="text-gold font-semibold font-sans-title tracking-widest text-xs uppercase mb-4">Conclusion</p>
+      <h2 class="text-3xl md:text-4xl font-normal text-accent mb-8 leading-tight">結語</h2>
+      <p class="text-lg md:text-xl text-secondary-text leading-relaxed max-w-2xl mx-auto mb-12">
+        這三座別墅向我們揭示了民國時期上海極致繁榮的都市面貌。它們不只是精緻的藝術品，更是海派文化與西方先鋒建築思潮在東方土地上共生、碰撞與交融的不朽證物。
+      </p>
+      <div class="w-12 h-[1px] bg-divider mx-auto"></div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#F2EFE9] border-t border-divider py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="font-sans-title text-xs tracking-widest text-secondary-text uppercase">Shanghai Modern Residential Architecture Exhibition</p>
+      <p class="text-xs text-secondary-text/60 mt-2">© 2026 Shanghai Modern. Crafted for digital exhibition.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple intersection observer for fade-in animations on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.fade-in-section');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>
