@@ -16,9 +16,9 @@ export default class App {
           {
             title: '1. 建築學名詞',
             items: [
-              '尺度大小',
-              '折衷主義',
-              'Art Deco'
+              '概念：尺度大小',
+              '建築師：鄔達克',
+              '風格：折衷主義與 Art Deco'
             ]
           },
           {
@@ -27,8 +27,7 @@ export default class App {
               '榮宅',
               '外灘源',
               '孫科別墅',
-              '吳同文住宅',
-              '總結'
+              '吳同文住宅'
             ]
           },
           {
@@ -40,44 +39,109 @@ export default class App {
       },
       {
         id: 'gallery',
-        title: '個人作品',
+        title: '上海常見景點',
         type: 'gallery',
         images: [
-          '截圖 2026-07-26 下午6.58.14.png',
-          '截圖 2026-07-26 下午6.58.43.png',
-          '截圖 2026-07-26 下午6.59.03.png',
-          '截圖 2026-07-26 下午6.59.15.png',
-          '截圖 2026-07-26 下午6.59.27.png'
+          '上海常見景點/截圖 2026-07-26 下午6.58.14.png',
+          '上海常見景點/截圖 2026-07-26 下午6.58.43.png',
+          '上海常見景點/截圖 2026-07-26 下午6.59.03.png',
+          '上海常見景點/截圖 2026-07-26 下午6.59.15.png',
+          '上海常見景點/截圖 2026-07-26 下午6.59.27.png'
         ]
       },
       {
-        id: 'context',
-        title: '歷史背景',
+        id: 'term-scale',
+        title: '概念：尺度大小',
+        type: 'section',
         content: [
-          '上海的崛起與外灘源的城市發展脈絡',
-          '租界劃分與城市擴張，形成上海的國際化空間',
-          '都市化與中產階級、精英階層的興起',
-          '工業資本的累積與洋房別墅需求，促進住宅樣式轉變'
+          '尺度指建築與人體、環境之間的比例關係',
+          '不同尺度營造出宏偉、莊嚴或親切的空間感受'
         ],
-        type: 'section'
+        images: [
+          '尺度大小/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg'
+        ]
       },
       {
-        id: 'timeline',
-        title: '近代住宅演變時間軸',
-        events: [
-          '晚清：傳統江南民居與石庫門早期',
-          '民國初期：折衷主義、新古典與歐式別墅的引入',
-          '摩登上海：裝飾藝術（Art Deco）與新興摩登住宅',
-          '三座標誌性住宅別墅的登場'
+        id: 'term-scale-2',
+        title: '概念：尺度大小',
+        type: 'section',
+        images: [
+          '尺度大小/retro_202607_nccu_business.jpg',
+          '尺度大小/retro_202607_nccu_comprehensive.jpg',
+          '尺度大小/retro_202607_nccu_executive.jpg'
+        ]
+      },
+      {
+        id: 'term-scale-3',
+        title: '概念：尺度大小',
+        type: 'section',
+        images: [
+          '尺度大小/retro_202607_executive_yuan_office1.jpg',
+          '尺度大小/retro_202607_executive_yuan_office2.jpg',
+          '尺度大小/retro_202607_executive_yuan_outlook.jpg',
+          '尺度大小/retro_202607_executive_yuan_stairs.jpg'
+        ]
+      },
+      {
+        id: 'term-architect',
+        title: '建築師：鄔達克',
+        type: 'section',
+        content: [
+          '鄔達克（László Hudec）——匈牙利裔建築師',
+          '活躍於 1920–30 年代的上海，作品風格多元',
+          '孫科別墅、吳同文住宅（綠房子）皆出自其手'
         ],
-        type: 'timeline'
+        images: [
+          '鄔達克/hudec_portrait_1934.png'
+        ]
+      },
+      {
+        id: 'term-architect-2',
+        title: '建築師：鄔達克',
+        type: 'section',
+        images: [
+          '鄔達克/IMG20260726205458.jpg',
+          '鄔達克/IMG20260726205620.jpg'
+        ]
+      },
+      {
+        id: 'term-architect-3',
+        title: '建築師：鄔達克',
+        type: 'section',
+        images: [
+          '鄔達克/IMG_20260726_212249.jpg',
+          '鄔達克/IMG_20260726_212306.jpg'
+        ]
+      },
+      {
+        id: 'term-style',
+        title: '風格：折衷主義與 Art Deco',
+        type: 'section',
+        content: [
+          '折衷主義——融合多種歷史風格元素的設計手法',
+          'Art Deco——1920–30 年代盛行的裝飾藝術，強調幾何線條與現代感'
+        ],
+        images: [
+          '折衷主義/9KWXBNGUWKnJAMNeUmK2uT.jpg',
+          '折衷主義/art-deco-centenary-sq_dezeen_2364_col_0-852x852.jpg',
+          '折衷主義/o-que-e-arquitetura-ecletica_11.jpg'
+        ]
+      },
+      {
+        id: 'shanghai-map',
+        title: '上海地圖',
+        type: 'section',
+        images: [
+          '上海地圖/shanghai_map.jpg'
+        ]
       },
       {
         id: 'rong-zhai',
         title: '榮宅',
         type: 'villa',
+        preview: '榮宅/retro_202607_rong_external.jpg',
         details: {
-          '歷史背景': '榮宗敬——麵粉大王與紅色資本家',
+          '歷史背景': '榮宗敬——麵粉大王',
           '建築師': '陳椿江 / 近代西方建築師',
           '規劃與佈局': '典型的花園洋房，法租界核心',
           '立面設計': '法國古典主義、折衷主義風格',
@@ -85,9 +149,24 @@ export default class App {
         }
       },
       {
+        id: 'rong-zhai-photos',
+        title: '榮宅',
+        type: 'section',
+        images: [
+          '榮宅/retro_202607_rong_internal.jpg',
+          '榮宅/retro_202607_rong_internal_roof.jpg',
+          '榮宅/retro_202607_internal_door.jpg',
+          '榮宅/retro_202607_rong_fire_cache.jpg',
+          '榮宅/retro_202607_exhibition.jpg',
+          '榮宅/retro_202607_exhibition2.jpg',
+          '榮宅/retro_202607_exhibition3.jpg'
+        ]
+      },
+      {
         id: 'bund-source',
         title: '外灘源與真光大樓',
         type: 'villa',
+        preview: '外灘源/retro_202607_rock_bund.png',
         details: {
           '地點與意義': '外灘源是上海近代都市空間的重要脈絡，代表外灘與租界文化的延伸',
           '真光大樓': '真光大樓是上海早期現代商業建築的重要代表，反映城市現代化與國際化的特質',
@@ -96,9 +175,19 @@ export default class App {
         }
       },
       {
+        id: 'bund-source-photos',
+        title: '外灘源與真光大樓',
+        type: 'section',
+        images: [
+          '外灘源/retro_202607_shanghai_light_building.jpg',
+          '外灘源/IMG20260726205458.jpg'
+        ]
+      },
+      {
         id: 'sun-ke-villa',
         title: '孫科別墅',
         type: 'villa',
+        preview: '孫科別墅/retro_202607_sunke_outlook.jpg',
         details: {
           '歷史背景': '孫科與鄔達克的故事',
           '建築師': '鄔達克 (László Hudec)',
@@ -106,6 +195,16 @@ export default class App {
           '立面設計': '西班牙式巴洛克、古典拱門',
           '建築語言': '折衷主義與西班牙風格的過渡'
         }
+      },
+      {
+        id: 'sun-ke-villa-photos',
+        title: '孫科別墅',
+        type: 'section',
+        images: [
+          '孫科別墅/retro_202607_sunke_hall.jpg',
+          '孫科別墅/retro_202607_sunke_stairs.jpg',
+          '孫科別墅/retro_202607_sunke_bunk.jpg'
+        ]
       },
       {
         id: 'wu-tongwen-residence',
@@ -128,16 +227,6 @@ export default class App {
           ['功能定位', '豪宅與資本象徵', '商業與都市象徵', '住宅與政治空間', '住宅與現代生活追求'],
           ['建築語言', '法國古典主義與折衷風格', '現代商業建築', '折衷主義與西班牙風格', '現代主義與流線型'],
           ['城市意義', '展現洋房與資本力量', '彰顯上海現代化', '反映精英居住文化', '代表摩登上海新風格']
-        ]
-      },
-      {
-        id: 'evolution',
-        title: '建築風格演進軌跡',
-        type: 'timeline',
-        events: [
-          '折衷主義 (Eclecticism)',
-          '裝飾藝術 (Art Deco)',
-          '現代主義 (Modernism)'
         ]
       },
       {
@@ -177,9 +266,18 @@ export default class App {
         return (
           '<section id="' + data.id + '" class="story-section">' +
             '<h2>' + data.title + '</h2>' +
-            '<ul class="story-list">' +
-              data.content.map(item => '<li>' + item + '</li>').join('') +
-            '</ul>' +
+            (data.content ?
+              '<ul class="story-list">' +
+                data.content.map(item => '<li>' + item + '</li>').join('') +
+              '</ul>'
+            : '') +
+            (data.images ?
+              '<div class="topic-gallery' + (data.images.length === 1 ? ' topic-gallery--single' : '') + (data.images.length === 4 ? ' topic-gallery--quad' : '') + '">' +
+                data.images.map((name, index) => (
+                  '<img class="topic-image" src="' + encodeURI('/images/' + name) + '" alt="' + data.title + ' ' + (index + 1) + '" loading="lazy" />'
+                )).join('') +
+              '</div>'
+            : '') +
           '</section>'
         );
       case 'gallery':
@@ -222,7 +320,11 @@ export default class App {
                   '</div>'
                 )).join('') +
               '</div>' +
-              '<div class="placeholder-card">圖片預覽區</div>' +
+              (data.preview ?
+                '<div class="villa-image-card">' +
+                  '<img class="villa-image" src="' + encodeURI('/images/' + data.preview) + '" alt="' + data.title + '" loading="lazy" />' +
+                '</div>'
+              : '<div class="placeholder-card">圖片預覽區</div>') +
             '</div>' +
           '</section>'
         );

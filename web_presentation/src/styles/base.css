@@ -203,6 +203,20 @@ body {
   background: linear-gradient(135deg, rgba(232, 239, 233, 0.7), rgba(255, 253, 249, 0.95));
 }
 
+.villa-image-card {
+  min-height: 22rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.villa-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 22rem;
+  object-fit: cover;
+}
+
 .comparison-card {
   overflow-x: auto;
   background: rgba(255, 250, 242, 0.95);
@@ -356,6 +370,55 @@ body {
   border-radius: 0.8rem;
   border: 1px solid rgba(184, 139, 91, 0.35);
   box-shadow: 0 14px 26px rgba(83, 49, 24, 0.08);
+}
+
+.topic-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  width: min(1200px, 100%);
+  margin: 1.5rem auto 0;
+}
+
+.topic-image {
+  display: block;
+  width: 100%;
+  height: min(46vh, 440px);
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 0;
+  box-shadow: none;
+}
+
+.topic-gallery--quad {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+}
+
+#term-architect-2 .topic-gallery,
+#term-architect-3 .topic-gallery,
+#bund-source-photos .topic-gallery {
+  width: min(1280px, 100%);
+  gap: 1.5rem;
+}
+
+#term-architect-2 .topic-image,
+#term-architect-3 .topic-image,
+#bund-source-photos .topic-image {
+  object-fit: contain;
+  height: calc(100vh - 14rem);
+  max-height: none;
+}
+
+.topic-gallery--single {
+  grid-template-columns: 1fr;
+  max-width: 900px;
+}
+
+.topic-gallery--single .topic-image {
+  height: auto;
+  max-height: calc(100vh - 18rem);
+  object-fit: contain;
 }
 
 .comparison-table {
