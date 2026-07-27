@@ -44,11 +44,11 @@ export default class App {
         title: '上海常見景點',
         type: 'gallery',
         images: [
-          '上海常見景點/截圖 2026-07-26 下午6.58.14.png',
-          '上海常見景點/截圖 2026-07-26 下午6.58.43.png',
-          '上海常見景點/截圖 2026-07-26 下午6.59.03.png',
-          '上海常見景點/截圖 2026-07-26 下午6.59.15.png',
-          '上海常見景點/截圖 2026-07-26 下午6.59.27.png'
+          '上海常見景點/截圖 2026-07-26 下午6.58.14.jpg',
+          '上海常見景點/截圖 2026-07-26 下午6.58.43.jpg',
+          '上海常見景點/截圖 2026-07-26 下午6.59.03.jpg',
+          '上海常見景點/截圖 2026-07-26 下午6.59.15.jpg',
+          '上海常見景點/截圖 2026-07-26 下午6.59.27.jpg'
         ]
       },
       {
@@ -94,7 +94,7 @@ export default class App {
           '孫科別墅、吳同文住宅（綠房子）皆出自其手'
         ],
         images: [
-          '鄔達克/hudec_portrait_1934.png'
+          '鄔達克/hudec_portrait_1934.jpg'
         ]
       },
       {
@@ -168,7 +168,7 @@ export default class App {
         id: 'bund-source',
         title: '外灘源與真光大樓',
         type: 'villa',
-        preview: '外灘源/retro_202607_rock_bund.png',
+        preview: '外灘源/retro_202607_rock_bund.jpg',
         details: {
           '地點與意義': '外灘源是上海近代都市空間的重要脈絡，代表外灘與租界文化的延伸',
           '真光大樓': '真光大樓是上海早期現代商業建築的重要代表，反映城市現代化與國際化的特質',
@@ -377,7 +377,7 @@ export default class App {
               '</div>' +
               '<div class="toc-image-panel">' +
                 '<div class="toc-image-frame">' +
-                  '<img class="toc-image" src="' + asset('images/content_image.png') + '" alt="Shanghai villa reference image" />' +
+                  '<img class="toc-image" src="' + asset('images/content_image.jpg') + '" alt="Shanghai villa reference image" />' +
                   '<a class="toc-image-link" href="https://www.youtube.com/shorts/nDBkDvbwFqI" target="_blank" rel="noopener noreferrer">' +
                     '<span>Open reference video</span>' +
                   '</a>' +
