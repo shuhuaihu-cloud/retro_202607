@@ -16,11 +16,9 @@
      WCAG AA 要求的 4.5:1(實測 2.96 與 4.15),所以文字用加深版,
      原色保留給不受對比度規範的裝飾線。 */
   --gold: #A78C63;        /* 僅用於邊框、分隔線 */
+  --gold-faint: rgba(167, 140, 99, 0.32);  /* 裱框的內側線、照片細框 */
   --gold-text: #7D694A;   /* 4.87:1 */
   --muted: #6B6B6B;       /* 4.94:1 */
-
-  --shadow: 0 20px 45px rgba(34, 34, 34, 0.10);
-  --shadow-card: 0 14px 26px rgba(38, 71, 61, 0.07);
 
   --font-sans: Inter, "PingFang TC", "Heiti TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
   --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Noto Serif TC", "Songti TC", serif;
