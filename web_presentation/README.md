@@ -96,6 +96,27 @@ The project follows a standard Vite project structure, with application code loc
 
 Images live in \`public/images\`, grouped into one folder per topic. Each story entry in \`src/app.js\` references them by path relative to \`public/images\`; the \`asset()\` helper resolves them through \`import.meta.env.BASE_URL\` so they work under the GitHub Pages sub-path.
 
+### Add or Replace Images
+
+**Always compress before committing.** Files in \`public/\` are copied to \`dist\` untouched — Vite does not optimise them — so whatever you drop in is exactly what every visitor downloads, and it stays in git history forever. A camera or phone original is typically 5–50 MB against a slot that renders at 300–1200 px.
+
+1.  Drop the file into the appropriate folder under \`public/images\`.
+2.  Run the optimiser:
+    \`\`\`bash
+    npm run optimize:images              # scan everything
+    npm run optimize:images -- 榮宅       # or just one folder
+    \`\`\`
+3.  Reference it from the relevant story entry in \`src/app.js\`, using the path relative to \`public/images\` (no leading slash, no \`public/\`).
+4.  \`npm run build\` and check the result with \`npm run preview\`.
+
+The script resizes anything over a 2000 px long edge and re-encodes at JPEG q80, in place. It uses only \`sips\`, which ships with macOS, so there is nothing to install.
+
+It is safe to re-run: files already within the limits are skipped rather than re-compressed, and a result that is not meaningfully smaller than its input is discarded. This matters because every JPEG re-encode loses a little quality, so a naive script run twice would quietly degrade the whole library.
+
+PNGs are always converted to JPEG, since photographic PNGs are usually more than twice the size for no visible benefit. **A converted PNG changes the file extension, so the reference in \`src/app.js\` must be updated too** — the script prints the list of affected files when this happens. Verify with \`grep -rn '\.png' src/\`. A PNG that genuinely compresses better than JPEG (line art, flat colour) is detected and left alone.
+
+If you need a transparent background, keep the file as PNG and exclude it from the script — flattening transparency to JPEG produces a black background.
+
 ### Customize Colors and Fonts
 
 The palette that is actually rendered is the \`:root\` block at the top of \`src/styles/base.css\`. Note that \`src/styles/variables.css\` holds a second, different palette (the one specified in \`.ai/DESIGN_RULES.md\`) and is not currently imported — the two have diverged and should eventually be reconciled.
