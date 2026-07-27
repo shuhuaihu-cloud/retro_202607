@@ -77,3 +77,26 @@ npm run build
 \`\`\`
 
 This will generate a \`dist\` folder containing the optimized and bundled static assets. You can deploy the contents of this folder to any static hosting service.
+
+### GitHub Pages (automated)
+
+The site is deployed automatically to GitHub Pages on every push to \`main\`:
+
+**Live site:** https://shuhuaihu-cloud.github.io/retro_202607/
+
+How it works:
+
+*   \`.github/workflows/deploy.yml\` (at the repository root) builds \`web_presentation/\` and publishes \`dist\` via GitHub Pages.
+*   The base path is derived automatically from the repository name and passed to the build as \`VITE_BASE=/<repo>/\`. \`vite.config.js\` reads it (\`base: process.env.VITE_BASE || '/'\`), and image URLs in \`src/app.js\` are resolved through \`import.meta.env.BASE_URL\`, so everything works under the \`/<repo>/\` sub-path.
+
+To publish updates:
+
+\`\`\`bash
+git add -A
+git commit -m "your message"
+git push
+\`\`\`
+
+Then watch the **Actions** tab for progress. The finished site updates within a few minutes.
+
+One-time setup (already done for this repo): in **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**.
