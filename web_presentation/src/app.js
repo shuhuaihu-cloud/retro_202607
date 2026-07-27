@@ -134,7 +134,8 @@ export default class App {
         title: '上海地圖',
         type: 'section',
         images: [
-          '上海地圖/shanghai_map.jpg'
+          '上海地圖/shanghai_map.jpg',
+          '上海地圖/Seal_of_the_Shanghai_International_Settlement_pre-WWI.svg.webp'
         ]
       },
       {
@@ -148,7 +149,11 @@ export default class App {
           '規劃與佈局': '典型的花園洋房，法租界核心',
           '立面設計': '法國古典主義、折衷主義風格',
           '建築語言': '極致優雅的法國古典主義與折衷風格的融合'
-        }
+        },
+        links: [
+          { url: 'https://www.youtube.com/watch?v=ZbX73-QJ_UE' },
+          { url: 'https://www.youtube.com/watch?v=cuLSbyPzdjQ' }
+        ]
       },
       {
         id: 'rong-zhai-photos',
@@ -158,7 +163,14 @@ export default class App {
           '榮宅/retro_202607_rong_internal.jpg',
           '榮宅/retro_202607_rong_internal_roof.jpg',
           '榮宅/retro_202607_internal_door.jpg',
-          '榮宅/retro_202607_rong_fire_cache.jpg',
+          '榮宅/retro_202607_rong_fire_cache.jpg'
+        ]
+      },
+      {
+        id: 'rong-zhai-exhibition',
+        title: '榮宅',
+        type: 'section',
+        images: [
           '榮宅/retro_202607_exhibition.jpg',
           '榮宅/retro_202607_exhibition2.jpg',
           '榮宅/retro_202607_exhibition3.jpg'
@@ -168,7 +180,7 @@ export default class App {
         id: 'bund-source',
         title: '外灘源與真光大樓',
         type: 'villa',
-        preview: '外灘源/retro_202607_rock_bund.jpg',
+        preview: '外灘源/light_building.jpg',
         details: {
           '地點與意義': '外灘源是上海近代都市空間的重要脈絡，代表外灘與租界文化的延伸',
           '真光大樓': '真光大樓是上海早期現代商業建築的重要代表，反映城市現代化與國際化的特質',
@@ -177,12 +189,29 @@ export default class App {
         }
       },
       {
+        id: 'bund-source-rock-bund',
+        title: '外灘源與真光大樓',
+        type: 'section',
+        images: [
+          '外灘源/retro_202607_rock_bund.jpg'
+        ]
+      },
+      {
+        id: 'bund-source-photos',
+        title: '外灘源與真光大樓',
+        type: 'section',
+        images: [
+          '外灘源/IMG20260621161727.jpg',
+          '外灘源/IMG20260621162143.jpg'
+        ]
+      },
+      {
         id: 'bund-source-photos',
         title: '外灘源與真光大樓',
         type: 'section',
         images: [
           '外灘源/retro_202607_shanghai_light_building.jpg',
-          '外灘源/IMG20260726205458.jpg'
+          '外灘源/IMG20260726205458.jpg',
         ]
       },
       {
@@ -196,7 +225,10 @@ export default class App {
           '規劃與佈局': '西班牙同樂會、私人花園',
           '立面設計': '西班牙式巴洛克、古典拱門',
           '建築語言': '折衷主義與西班牙風格的過渡'
-        }
+        },
+        links: [
+          { url: 'https://www.youtube.com/watch?v=huvNe0zRpkQ' }
+        ]
       },
       {
         id: 'sun-ke-villa-photos',
@@ -212,13 +244,17 @@ export default class App {
         id: 'wu-tongwen-residence',
         title: '吳同文住宅 / 綠房子',
         type: 'villa',
+        preview: '吳同文/wutongwen.jpg',
         details: {
           '歷史背景': '顏料大王吳同文的夢想之屋',
           '建築師': '鄔達克 (László Hudec)（鄔達克在上海的收官之作）',
           '規劃與佈局': '三角地塊的極致利用，現代流線型',
           '立面設計': '弧形陽台、大面橫向舷窗、綠色面磚',
           '建築語言': '極致的現代主義、流線型現代主義 Streamline Moderne'
-        }
+        },
+        links: [
+          { url: 'https://www.youtube.com/watch?v=ikIKChSjE1c&t=1s' }
+        ]
       },
       {
         id: 'comparison',
@@ -321,6 +357,15 @@ export default class App {
                     '<p>' + value + '</p>' +
                   '</div>'
                 )).join('') +
+                (data.links ?
+                  '<div class="villa-links">' +
+                    data.links.map((link, index) => (
+                      '<a class="villa-link" href="' + link.url + '" target="_blank" rel="noopener noreferrer">' +
+                        (link.label || ('參考影片' + (data.links.length > 1 ? ' ' + (index + 1) : ''))) +
+                      '</a>'
+                    )).join('') +
+                  '</div>'
+                : '') +
               '</div>' +
               (data.preview ?
                 '<div class="villa-image-card">' +

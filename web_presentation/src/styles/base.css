@@ -260,6 +260,32 @@ body {
   color: var(--text);
 }
 
+.villa-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.15rem;
+}
+
+.villa-link {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--gold);
+  border-radius: 0;
+  background: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.villa-link:hover {
+  transform: translateY(-1px);
+}
+
 .villa-image-card {
   min-height: 22rem;
   border-radius: 0;
@@ -475,6 +501,32 @@ body {
   max-width: 100%;
   max-height: calc(100vh - 14rem);
   justify-self: center;
+}
+
+/* 地圖大、標誌小,但用 flex + align-items:center 讓兩張圖的
+   垂直中線對齊在同一條橫線上,而不是頂部或底部對齊。 */
+#shanghai-map .topic-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: min(1280px, 100%);
+  gap: 2rem;
+}
+
+#shanghai-map .topic-image {
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+#shanghai-map .topic-image:nth-of-type(1) {
+  max-height: 64vh;
+}
+
+#shanghai-map .topic-image:nth-of-type(2) {
+  max-height: 24vh;
 }
 
 .topic-gallery--single {
