@@ -1,3 +1,5 @@
+const asset = (path) => encodeURI(import.meta.env.BASE_URL + path);
+
 export default class App {
   constructor(el) {
     this.el = el;
@@ -274,7 +276,7 @@ export default class App {
             (data.images ?
               '<div class="topic-gallery' + (data.images.length === 1 ? ' topic-gallery--single' : '') + (data.images.length === 4 ? ' topic-gallery--quad' : '') + '">' +
                 data.images.map((name, index) => (
-                  '<img class="topic-image" src="' + encodeURI('/images/' + name) + '" alt="' + data.title + ' ' + (index + 1) + '" loading="lazy" />'
+                  '<img class="topic-image" src="' + asset('images/' + name) + '" alt="' + data.title + ' ' + (index + 1) + '" loading="lazy" />'
                 )).join('') +
               '</div>'
             : '') +
@@ -287,7 +289,7 @@ export default class App {
             '<div class="gallery-grid">' +
               data.images.map((name, index) => (
                 '<figure class="gallery-item">' +
-                  '<img class="gallery-image" src="' + encodeURI('/images/' + name) + '" alt="作品 ' + (index + 1) + '" loading="lazy" />' +
+                  '<img class="gallery-image" src="' + asset('images/' + name) + '" alt="作品 ' + (index + 1) + '" loading="lazy" />' +
                 '</figure>'
               )).join('') +
             '</div>' +
@@ -322,7 +324,7 @@ export default class App {
               '</div>' +
               (data.preview ?
                 '<div class="villa-image-card">' +
-                  '<img class="villa-image" src="' + encodeURI('/images/' + data.preview) + '" alt="' + data.title + '" loading="lazy" />' +
+                  '<img class="villa-image" src="' + asset('images/' + data.preview) + '" alt="' + data.title + '" loading="lazy" />' +
                 '</div>'
               : '<div class="placeholder-card">圖片預覽區</div>') +
             '</div>' +
@@ -375,7 +377,7 @@ export default class App {
               '</div>' +
               '<div class="toc-image-panel">' +
                 '<div class="toc-image-frame">' +
-                  '<img class="toc-image" src="/images/content_image.png" alt="Shanghai villa reference image" />' +
+                  '<img class="toc-image" src="' + asset('images/content_image.png') + '" alt="Shanghai villa reference image" />' +
                   '<a class="toc-image-link" href="https://www.youtube.com/shorts/nDBkDvbwFqI" target="_blank" rel="noopener noreferrer">' +
                     '<span>Open reference video</span>' +
                   '</a>' +
