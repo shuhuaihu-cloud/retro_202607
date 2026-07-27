@@ -366,7 +366,7 @@ export default class App {
                     '<div class="toc-group">' +
                       '<h3>' +
                         (number ? '<span class="toc-number">' + number + '</span>' : '') +
-                        '<span class="toc-title-text">' + label + '</span>' +
+                        label +
                       '</h3>' +
                       '<ul class="toc-list">' +
                         group.items.map(item => '<li>' + item + '</li>').join('') +
@@ -387,6 +387,11 @@ export default class App {
           '</section>'
         );
       default:
+        // 沒有對應的 case 就整節消失,而且畫面上不會有任何跡象。
+        // 多半是 type 打錯字,所以留個線索指出是哪一節。
+        console.warn(
+          '[app] 未知的 section type「' + data.type + '」(id: ' + data.id + '),該節未渲染'
+        );
         return '';
     }
   }

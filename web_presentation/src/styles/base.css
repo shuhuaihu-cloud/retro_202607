@@ -88,10 +88,6 @@ body {
   z-index: 1;
 }
 
-.hero-tag {
-  display: none;
-}
-
 .story-section {
   width: 100%;
   min-height: 100vh;
@@ -310,13 +306,6 @@ body {
   gap: 0.8rem;
   text-align: center;
   overflow: hidden;
-}
-
-.toc-image-caption {
-  font-size: 1rem;
-  color: var(--accent);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .toc-image {
