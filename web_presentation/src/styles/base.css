@@ -203,6 +203,32 @@ body {
   background: linear-gradient(135deg, rgba(232, 239, 233, 0.7), rgba(255, 253, 249, 0.95));
 }
 
+.detail-block {
+  margin-bottom: 1.15rem;
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--divider);
+}
+
+.detail-block:last-child {
+  margin-bottom: 0;
+}
+
+.villa-card .detail-block h3 {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.villa-card .detail-block p {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
 .villa-image-card {
   min-height: 22rem;
   border-radius: 1.2rem;

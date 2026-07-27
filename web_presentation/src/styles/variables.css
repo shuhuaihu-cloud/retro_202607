@@ -5,4 +5,7 @@
   --color-accent: #26473D;
   --color-gold: #A78C63;
   --color-divider: #D8D4CF;
+
+  --font-sans: Inter, "PingFang TC", "Heiti TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  --font-serif: "Source Serif 4", "Noto Serif TC", "Songti TC", PMingLiU, serif;
 }

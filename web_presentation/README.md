@@ -2,16 +2,59 @@
 
 This project is a web-based architectural exhibition focusing on the evolution of modern residential architecture in Shanghai from 1930-1940. It explores the transition from Beaux-Arts and Eclectic traditions towards Modernism through three case studies: Sun Ke Villa, Rong Zhai, and the Wu Tongwen Residence.
 
-The presentation is designed as a digital museum experience, prioritizing editorial layout, high-quality photography, and subtle animations.
+The presentation is designed as a digital museum experience, prioritizing editorial layout and high-quality photography.
 
 ## Technology Stack
 
 *   **Vite**: Frontend tooling and development server.
 *   **Vanilla JavaScript**: For all application logic and interactivity.
-*   **Tailwind CSS**: For utility-first styling.
-*   **GSAP (GreenSock Animation Platform)**: For high-performance animations.
-*   **Lenis**: For smooth scrolling effects.
-*   **Heroicons**: For UI icons.
+*   **Plain CSS**: Hand-written stylesheets with CSS custom properties as design tokens. No CSS framework.
+*   **PostCSS + Autoprefixer**: Vendor prefixing at build time.
+
+There is deliberately no CSS framework, no animation library, and no UI component library. See **Optional Tooling** below for what was considered and why it was left out.
+
+## Optional Tooling
+
+These tools are *not* installed. They were evaluated for this project and set aside, but are recorded here so the reasoning does not have to be rediscovered — and so they can be picked up later if the project's needs change.
+
+### Tailwind CSS
+
+A utility-first CSS framework. Instead of naming a class and writing rules for it in a stylesheet, you compose single-purpose classes directly in the markup:
+
+\`\`\`html
+<!-- current approach: named class + rules in base.css -->
+<div class="villa-grid">…</div>
+
+<!-- Tailwind approach -->
+<div class="grid grid-cols-2 gap-6">…</div>
+\`\`\`
+
+**Why it was left out.** This is a single-page, single-maintainer exhibition site whose layouts are highly bespoke — most sections need their own treatment rather than reusing a shared component vocabulary. Tailwind trades away per-element freedom in exchange for enforced consistency, and that trade pays off when styling is *repetitive*. Here it is mostly *custom*, so the framework would have added a build step and a class vocabulary without removing much work. Effects such as layered gradient backgrounds and \`clamp()\` fluid type would have had to be written as arbitrary-value escape hatches (\`bg-[linear-gradient(…)]\`), which is more verbose than plain CSS, not less. Rendering also happens through string concatenation in \`src/app.js\`, so there is no component layer to absorb long class lists.
+
+**When to reconsider.** Adopt it if the project grows a real component vocabulary (repeated cards, buttons, form controls across many pages), gains additional contributors who need a shared spacing and colour scale, moves to a component framework such as React or Vue, or starts needing many responsive and state variants (\`md:\`, \`hover:\`, \`focus-visible:\`) that are tedious to hand-write.
+
+**How to add it back.**
+
+\`\`\`bash
+npm install -D tailwindcss
+npx tailwindcss init
+\`\`\`
+
+Then register the plugin in \`postcss.config.js\`, point \`content\` at \`./index.html\` and \`./src/**/*.{js,html}\`, mirror the palette from \`.ai/DESIGN_RULES.md\` into \`theme.extend\`, and add the three directives to the top of \`src/styles/base.css\`:
+
+\`\`\`css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+\`\`\`
+
+That last step is essential — an earlier version of this project had the config and the PostCSS plugin in place but no directives and no utility classes in the markup, so the entire pipeline ran on every build and produced nothing.
+
+**A lighter alternative.** If the goal is only consistency rather than a full framework, CSS custom properties already provide it. \`src/styles/variables.css\` defines colour and font tokens; extending it with a spacing and radius scale (\`--space-4\`, \`--radius-card\`) and using those everywhere instead of ad-hoc values gets most of the benefit at none of the cost.
+
+### GSAP, ScrollTrigger and Lenis
+
+Animation and smooth-scroll libraries. \`.ai/DESIGN_RULES.md\` specifies scroll-driven motion — image reveals, masks, parallax, text stagger — and \`gsap\`, \`lenis\` and \`heroicons\` were once listed as dependencies, but no animation code was ever written and the packages have been removed. The site currently relies on CSS \`scroll-snap\` and \`scroll-behavior: smooth\` alone. Reinstate them if the motion design in \`DESIGN_RULES.md\` is revisited; note that \`prefers-reduced-motion\` should be honoured if so.
 
 ## Folder Structure
 
@@ -19,23 +62,19 @@ The project follows a standard Vite project structure, with application code loc
 
 \`\`\`
 /web_presentation
-├── public/              # Static assets (images, fonts)
-│   ├── images/
-│   ├── plans/
-│   └── ...
+├── public/
+│   └── images/          # One folder per topic, served as-is
 ├── src/
-│   ├── components/      # Reusable UI components (JS, CSS)
-│   ├── sections/        # Major content sections
-│   ├── layouts/         # Layout definitions
-│   ├── styles/          # Global and component-specific styles
-│   ├── scripts/         # Core JavaScript modules
-│   ├── assets/          # JS-imported assets
-│   ├── data/            # Data modules (e.g., story content)
-│   ├── app.js           # Main application class
+│   ├── styles/
+│   │   ├── base.css        # All styling that is actually applied
+│   │   ├── variables.css   # Design tokens (not yet imported)
+│   │   ├── layout.css      # (not yet imported)
+│   │   └── typography.css  # (not yet imported)
+│   ├── app.js           # Story data + all rendering
 │   └── main.js          # Application entry point
 ├── index.html           # Main HTML file
 ├── package.json         # Project dependencies and scripts
-├── tailwind.config.js   # Tailwind CSS configuration
+├── postcss.config.js    # PostCSS (autoprefixer) configuration
 └── vite.config.js       # Vite configuration
 \`\`\`
 
@@ -55,11 +94,11 @@ The project follows a standard Vite project structure, with application code loc
 
 ### Replace Images
 
-All images are placeholders located in \`public/images\`. To replace them, simply overwrite the placeholder files with your own images, keeping the file names the same. For the villa sections, the placeholder is a gray box. You can modify the \`renderSection\` method in \`src/app.js\` to include \`<img>\` tags with the correct paths.
+Images live in \`public/images\`, grouped into one folder per topic. Each story entry in \`src/app.js\` references them by path relative to \`public/images\`; the \`asset()\` helper resolves them through \`import.meta.env.BASE_URL\` so they work under the GitHub Pages sub-path.
 
 ### Customize Colors and Fonts
 
-Colors and fonts are defined in \`tailwind.config.js\`. You can modify the \`theme.extend.colors\` and \`theme.extend.fontFamily\` objects to change the visual theme of the presentation.
+The palette that is actually rendered is the \`:root\` block at the top of \`src/styles/base.css\`. Note that \`src/styles/variables.css\` holds a second, different palette (the one specified in \`.ai/DESIGN_RULES.md\`) and is not currently imported — the two have diverged and should eventually be reconciled.
 
 ### Add Additional Buildings
 
