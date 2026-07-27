@@ -1,11 +1,27 @@
+/* 全站設計 token。base.css 透過 @import 載入,是唯一的色彩與字型來源。
+   色票依據 .ai/DESIGN_RULES.md。 */
+
 :root {
-  --color-background: #F8F6F2;
-  --color-text: #222222;
-  --color-secondary-text: #777777;
-  --color-accent: #26473D;
-  --color-gold: #A78C63;
-  --color-divider: #D8D4CF;
+  --bg: #F8F6F2;          /* 背景:暖白 */
+  --panel: #FFFFFF;       /* 卡片、面板 */
+  --text: #222222;        /* 內文 */
+  --accent: #26473D;      /* 主色:深綠 */
+  --accent-soft: #E4EBE7; /* 深綠的淺色底,用於表頭、時間軸光暈 */
+  --divider: #D8D4CF;     /* 分隔線、框線 */
+
+  /* 大字專用的中間調。2.1rem 以上用 --text 會過重,壓過深綠標題 */
+  --text-large: #4A4A4A;
+
+  /* DESIGN_RULES 的金色 #A78C63 與次要文字 #777777 當文字用都低於
+     WCAG AA 要求的 4.5:1(實測 2.96 與 4.15),所以文字用加深版,
+     原色保留給不受對比度規範的裝飾線。 */
+  --gold: #A78C63;        /* 僅用於邊框、分隔線 */
+  --gold-text: #7D694A;   /* 4.87:1 */
+  --muted: #6B6B6B;       /* 4.94:1 */
+
+  --shadow: 0 20px 45px rgba(34, 34, 34, 0.10);
+  --shadow-card: 0 14px 26px rgba(38, 71, 61, 0.07);
 
   --font-sans: Inter, "PingFang TC", "Heiti TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-  --font-serif: "Source Serif 4", "Noto Serif TC", "Songti TC", PMingLiU, serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Noto Serif TC", "Songti TC", serif;
 }
