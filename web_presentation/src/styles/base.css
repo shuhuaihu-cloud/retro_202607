@@ -462,12 +462,19 @@ body {
   gap: 1.5rem;
 }
 
+/* 這幾組不裁切,完整呈現照片。
+   關鍵是寬高都留 auto、只用 max-* 設限 —— 若寫死 width: 100% 加固定高度,
+   contain 縮放後會在框內留白,金線就跟照片脫開了。兩邊都 auto 時,
+   元素框永遠等於實際算繪出來的圖,邊框自然貼合。 */
 #term-architect-2 .topic-image,
 #term-architect-3 .topic-image,
 #bund-source-photos .topic-image {
   object-fit: contain;
-  height: calc(100vh - 14rem);
-  max-height: none;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 14rem);
+  justify-self: center;
 }
 
 .topic-gallery--single {
@@ -476,9 +483,12 @@ body {
 }
 
 .topic-gallery--single .topic-image {
-  height: auto;
-  max-height: calc(100vh - 18rem);
   object-fit: contain;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 18rem);
+  justify-self: center;
 }
 
 .comparison-table {
