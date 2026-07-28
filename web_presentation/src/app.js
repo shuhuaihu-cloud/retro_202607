@@ -7,8 +7,12 @@ export default class App {
       { 
         id: 'cover',
         title: '現代的另類想像',
-        subtitle: '1930年代上海建築案例',
-        type: 'hero'
+        subtitle: '1900–1930年代上海建築案例',
+        type: 'hero',
+        meta: [
+          '簡報人：Sam',
+          '簡報日期：2026-07-29'
+        ]
       },
       {
         id: 'toc',
@@ -26,8 +30,9 @@ export default class App {
           {
             title: '2. 上海建築',
             items: [
+              '租界地圖與歷史脈絡',
               '榮宅',
-              '外灘源',
+              '外灘源與真光大樓',
               '孫科別墅',
               '吳同文住宅'
             ]
@@ -67,6 +72,9 @@ export default class App {
         id: 'term-scale-2',
         title: '概念：尺度大小',
         type: 'section',
+        content: [
+          '政治大學：商學院、綜合院館與行政大樓的量體對比',
+        ],
         images: [
           '尺度大小/retro_202607_nccu_business.jpg',
           '尺度大小/retro_202607_nccu_comprehensive.jpg',
@@ -77,10 +85,13 @@ export default class App {
         id: 'term-scale-3',
         title: '概念：尺度大小',
         type: 'section',
+        content: [
+          '行政院：辦公空間、廊道與樓梯所塑造的機構性尺度',
+        ],
         images: [
+          '尺度大小/retro_202607_executive_yuan_outlook.jpg',
           '尺度大小/retro_202607_executive_yuan_office1.jpg',
           '尺度大小/retro_202607_executive_yuan_office2.jpg',
-          '尺度大小/retro_202607_executive_yuan_outlook.jpg',
           '尺度大小/retro_202607_executive_yuan_stairs.jpg'
         ]
       },
@@ -89,9 +100,9 @@ export default class App {
         title: '建築師：鄔達克',
         type: 'section',
         content: [
-          '鄔達克（László Hudec）——匈牙利裔建築師',
-          '活躍於 1920–30 年代的上海，作品風格多元',
-          '孫科別墅、吳同文住宅（綠房子）皆出自其手'
+          '鄔達克（László Hudec）——斯洛伐克裔匈牙利籍建築師',
+          '1918 年抵達上海，執業至 1947 年，全盛期為 1920–30 年代',
+          '孫科別墅、吳同文住宅（綠房子）、真光大樓皆出自其手'
         ],
         images: [
           '鄔達克/hudec_portrait_1934.jpg'
@@ -101,6 +112,11 @@ export default class App {
         id: 'term-architect-2',
         title: '建築師：鄔達克',
         type: 'section',
+        content: [
+          '1918 年因俄國內戰輾轉抵達上海，先入美籍建築師克利洋行，1925 年自立開業',
+          '在上海設計逾百幢建築，其中三十餘幢列為上海市優秀歷史建築',
+          '代表作：國際飯店（1934，22 層，落成後長期為遠東最高建築）、大光明電影院、慕爾堂'
+        ],
         images: [
           '鄔達克/IMG20260726205458.jpg',
           '鄔達克/IMG20260726205620.jpg'
@@ -110,6 +126,10 @@ export default class App {
         id: 'term-architect-3',
         title: '建築師：鄔達克',
         type: 'section',
+        content: [
+          '他不是風格的信徒：同一雙手交出西班牙式自宅、Art Deco 辦公樓與現代主義住宅',
+          '1947 年離開上海，先後移居盧加諾、羅馬，1950 年定居柏克萊，1958 年逝於加州'
+        ],
         images: [
           '鄔達克/IMG_20260726_212249.jpg',
           '鄔達克/IMG_20260726_212306.jpg'
@@ -120,8 +140,10 @@ export default class App {
         title: '風格：折衷主義與 Art Deco',
         type: 'section',
         content: [
-          '折衷主義——融合多種歷史風格元素的設計手法',
-          'Art Deco——1920–30 年代盛行的裝飾藝術，強調幾何線條與現代感'
+          '折衷主義——不追求風格純粹，依業主意向與場地條件調度歷史語彙',
+          'Art Deco——1920–30 年代盛行的裝飾藝術，強調幾何線條與現代感',
+          '「Art Deco」之名源自 1925 年巴黎萬國裝飾藝術與現代工業博覽會',
+          '兩者在當時的上海同時流行，甚至並存於同一幢建築之上'
         ],
         images: [
           '折衷主義/9KWXBNGUWKnJAMNeUmK2uT.jpg',
@@ -131,8 +153,14 @@ export default class App {
       },
       {
         id: 'shanghai-map',
-        title: '上海地圖',
+        title: '上海地圖與租界',
         type: 'section',
+        content: [
+          '1843 年上海開埠，英租界劃定於縣城以北，法租界、美租界隨後設立',
+          '1863 年英、美租界合併為公共租界；1899 年 5 月公共租界大擴張，西界抵靜安寺',
+          '公共租界與法租界以洋涇浜（今延安東路）、長浜（今延安中路）為界',
+          '本次三個住宅案例都落在這波西擴與越界築路所開拓的西區版圖上'
+        ],
         images: [
           '上海地圖/shanghai_map.jpg',
           '上海地圖/Seal_of_the_Shanghai_International_Settlement_pre-WWI.svg.webp'
@@ -144,11 +172,11 @@ export default class App {
         type: 'villa',
         preview: '榮宅/retro_202607_rong_external.jpg',
         details: {
-          '歷史背景': '榮宗敬——麵粉大王',
-          '建築師': '陳椿江 / 近代西方建築師',
-          '規劃與佈局': '典型的花園洋房，法租界核心',
-          '立面設計': '法國古典主義、折衷主義風格',
-          '建築語言': '極致優雅的法國古典主義與折衷風格的融合'
+          '歷史背景': '榮宗敬（1873–1938）——麵粉大王與棉紗大王',
+          '建築師': '陳椿江（1918 年榮宗敬購入後改建設計）；原屋 1908 年由外僑興建，設計者不詳',
+          '規劃與佈局': '公共租界西區（原西摩路，今陝西北路）的典型花園洋房',
+          '立面設計': '折衷主義風格，主立面兩層列柱敞廊具法國古典主義特徵',
+          '建築語言': '法國古典主義與折衷風格的融合；彩色玻璃與牆磚全由歐洲進口'
         },
         links: [
           { url: 'https://www.youtube.com/watch?v=ZbX73-QJ_UE' },
@@ -157,8 +185,13 @@ export default class App {
       },
       {
         id: 'rong-zhai-photos',
-        title: '榮宅',
+        title: '榮宅：室內與細部',
         type: 'section',
+        content: [
+          '彩色玻璃與牆磚全數自歐洲進口，宴會廳上方另設彩色玻璃天頂',
+          '玻璃圖案各有講究：有的隱喻榮氏創業歷程，有的近似教堂花窗',
+          '底樓宴會廳與客廳分列甬道兩側，接待與家居動線因此得以分開'
+        ],
         images: [
           '榮宅/retro_202607_rong_internal.jpg',
           '榮宅/retro_202607_rong_internal_roof.jpg',
@@ -168,8 +201,13 @@ export default class App {
       },
       {
         id: 'rong-zhai-exhibition',
-        title: '榮宅',
+        title: '榮宅：從私宅到展場',
         type: 'section',
+        content: [
+          '榮宗敬在此居住約二十年，1938 年初離開上海',
+          '2004 年列為上海市優秀歷史建築，2014 年列為上海市文物保護單位',
+          'Prada 自 2011 年起歷時六年修繕，2017 年 10 月 12 日作為文化活動空間對外開放'
+        ],
         images: [
           '榮宅/retro_202607_exhibition.jpg',
           '榮宅/retro_202607_exhibition2.jpg',
@@ -182,16 +220,21 @@ export default class App {
         type: 'villa',
         preview: '外灘源/light_building.jpg',
         details: {
-          '地點與意義': '外灘源是上海近代都市空間的重要脈絡，代表外灘與租界文化的延伸',
-          '真光大樓': '真光大樓是上海早期現代商業建築的重要代表，反映城市現代化與國際化的特質',
-          '建築特徵': '高層商業建築、強烈的現代幾何感與立面節奏',
-          '文化意義': '作為上海近代生活與商業文明的象徵，連結了城市記憶與建築演變'
+          '地點與意義': '外灘源（圓明園路一帶）保有外灘地區最早的建築群，1848 年英國領事館最先在此興建，是外灘的起點',
+          '真光大樓': '鄔達克設計，1930 年領照、1932 年竣工；原為浸會書局所有，「真光」得名於其《真光》月刊，西側與廣學會的廣學大樓平面連通',
+          '建築特徵': '裝飾藝術（Art Deco）風格，強調豎向線條，壁柱截面作皇冠形與銳角三角形；真光 9 層、廣學 8 層',
+          '文化意義': '出版與辦公機構的大樓，見證上海現代都市文明，也顯示鄔達克從住宅延伸到都市建築的軌跡'
         }
       },
       {
         id: 'bund-source-rock-bund',
-        title: '外灘源與真光大樓',
+        title: '外灘源：洛克·外灘源',
         type: 'section',
+        content: [
+          '範圍涵蓋圓明園路、北京東路、虎丘路一帶，是上海歷史最悠久的街區之一',
+          '圓明園路為外灘源一期改造區域，今以「洛克·外灘源」之名重新開放',
+          '真光大樓與廣學大樓 1994 年同列第二批上海市優秀歷史建築'
+        ],
         images: [
           '外灘源/retro_202607_rock_bund.jpg'
         ]
@@ -206,7 +249,7 @@ export default class App {
         ]
       },
       {
-        id: 'bund-source-photos',
+        id: 'bund-source-photos-2',
         title: '外灘源與真光大樓',
         type: 'section',
         images: [
@@ -220,11 +263,11 @@ export default class App {
         type: 'villa',
         preview: '孫科別墅/retro_202607_sunke_outlook.jpg',
         details: {
-          '歷史背景': '孫科與鄔達克的故事',
-          '建築師': '鄔達克 (László Hudec)',
-          '規劃與佈局': '西班牙同樂會、私人花園',
-          '立面設計': '西班牙式巴洛克、古典拱門',
-          '建築語言': '折衷主義與西班牙風格的過渡'
+          '歷史背景': '鄔達克為自己設計的自宅，後因慕爾堂資金危機由孫科出資相助，遂以近乎餽贈的價格轉讓',
+          '建築師': '鄔達克 (László Hudec)，1931 年建成',
+          '規劃與佈局': '哥倫比亞住宅圈內（原哥倫比亞路 22 號），假三層磚木結構，附私人花園',
+          '立面設計': '三個尖券門洞與依次排開的圓形拱門，四扇落地大窗拱衛中央鑄鐵欄杆陽台',
+          '建築語言': '以西班牙式為主，混合意大利文藝復興與巴洛克元素的折衷手法'
         },
         links: [
           { url: 'https://www.youtube.com/watch?v=huvNe0zRpkQ' }
@@ -232,8 +275,13 @@ export default class App {
       },
       {
         id: 'sun-ke-villa-photos',
-        title: '孫科別墅',
+        title: '孫科別墅：室內與細部',
         type: 'section',
+        content: [
+          '建築面積約 1051 平方公尺，假三層磚木結構，屋面覆紅色筒瓦',
+          '門洞、拱圈與樓梯構成層層轉折的入口序列，尺度始終維持在住宅的親密感',
+          '1951 年由上海生物製品研究所徵用，1989 年列為上海市文物保護單位與第一批優秀歷史建築，2020 年 11 月一層對外開放'
+        ],
         images: [
           '孫科別墅/retro_202607_sunke_hall.jpg',
           '孫科別墅/retro_202607_sunke_stairs.jpg',
@@ -246,34 +294,51 @@ export default class App {
         type: 'villa',
         preview: '吳同文/wutongwen.jpg',
         details: {
-          '歷史背景': '顏料大王吳同文的夢想之屋',
-          '建築師': '鄔達克 (László Hudec)（鄔達克在上海的收官之作）',
-          '規劃與佈局': '三角地塊的極致利用，現代流線型',
-          '立面設計': '弧形陽台、大面橫向舷窗、綠色面磚',
-          '建築語言': '極致的現代主義、流線型現代主義 Streamline Moderne'
+          '歷史背景': '顏料商吳同文（1908–1966）的夢想之屋，因銷售軍用綠色顏料致富',
+          '建築師': '鄔達克 (László Hudec)，1937–38 年落成，為其在上海最後幾件重要作品之一',
+          '規劃與佈局': '銅仁路、北京西路路口西南角的不規則轉角地塊，四層鋼筋混凝土結構',
+          '立面設計': '弧形轉角大銅窗與通長平台銅欄杆，綠色釉面磚外牆，外觀如停泊的郵輪',
+          '建築語言': '現代主義風格，局部帶裝飾藝術特徵，具流線型（Streamline Moderne）意象'
         },
         links: [
           { url: 'https://www.youtube.com/watch?v=ikIKChSjE1c&t=1s' }
         ]
       },
       {
-        id: 'comparison',
-        title: '外灘源與別墅樣式對比分析',
-        type: 'comparison',
-        headers: ['特性', '榮宅', '外灘源&nbsp;/&nbsp;真光大樓', '孫科別墅', '吳同文住宅'],
-        rows: [
-          ['功能定位', '豪宅與資本象徵', '商業與都市象徵', '住宅與政治空間', '住宅與現代生活追求'],
-          ['建築語言', '法國古典主義與折衷風格', '現代商業建築', '折衷主義與西班牙風格', '現代主義與流線型'],
-          ['城市意義', '展現洋房與資本力量', '彰顯上海現代化', '反映精英居住文化', '代表摩登上海新風格']
+        id: 'evolution',
+        title: '風格演進軌跡',
+        type: 'timeline',
+        events: [
+          '折衷主義　榮宅（1908／1918）——調度古典柱式與法式敞廊，以歷史語彙證明身份',
+          '西班牙式與文藝復興的混合　孫科別墅（1931）——風格仍是引用，但已從都市體面轉向郊區生活',
+          '裝飾藝術 Art Deco　真光大樓（1932）——裝飾退為幾何線條，垂直性成為現代都市的表情',
+          '現代主義 Modernism　綠房子（1937–38）——形式來自機能與技術，郵輪意象取代歷史語彙'
         ]
       },
       {
-        id: 'conclusion',
-        title: '結語',
+        id: 'personal_artwork',
+        title: '個人作品',
         type: 'section',
-        content: [
-          '這三座別墅向我們揭示了民國時期上海的什麼面貌？',
-          '西方先鋒思潮與東方海派文化的共生、交融與演變。'
+        images: [
+          '個人作品/FB_IMG_1785127207776.jpg'
+        ]
+      },
+      {
+        id: 'chronology',
+        title: '歷史脈絡',
+        type: 'timeline',
+        events: [
+          '1843　上海開埠，英租界劃定於縣城以北',
+          '1840 年代末　英國領事館在今圓明園路一帶興建，外灘最早的建築群由此開始',
+          '1899　公共租界大擴張，西界抵靜安寺，西摩路一帶成為新興住宅地帶',
+          '1908　榮宅前身落成——外僑的三層花園別墅，折衷主義',
+          '1918　鄔達克抵達上海；同年榮宗敬購入榮宅，聘陳椿江改建',
+          '1925　巴黎裝飾藝術博覽會確立 Art Deco 之名；鄔達克於上海自立開業',
+          '1931　孫科別墅建成，原為鄔達克自宅',
+          '1932　真光大樓竣工，Art Deco 進入都市高層建築',
+          '1934　國際飯店落成，鄔達克職業生涯的頂峰',
+          '1937–38　綠房子落成，現代主義住宅的極致',
+          '1947　鄔達克離開上海'
         ]
       }
     ];
@@ -298,6 +363,11 @@ export default class App {
               '<h1 class="hero-title">' + data.title + '</h1>' +
               '<p class="hero-subtitle">' + data.subtitle + '</p>' +
             '</div>' +
+            (data.meta ?
+              '<div class="hero-meta">' +
+                data.meta.map(item => '<span class="hero-meta-item">' + item + '</span>').join('') +
+              '</div>'
+            : '') +
           '</section>'
         );
       case 'section':
@@ -424,7 +494,7 @@ export default class App {
                 '<div class="toc-image-frame">' +
                   '<img class="toc-image" src="' + asset('images/content_image.jpg') + '" alt="Shanghai villa reference image" />' +
                   '<a class="toc-image-link" href="https://www.youtube.com/shorts/nDBkDvbwFqI" target="_blank" rel="noopener noreferrer">' +
-                    '<span>Open reference video</span>' +
+                    '<span>參考影片</span>' +
                   '</a>' +
                 '</div>' +
               '</div>' +

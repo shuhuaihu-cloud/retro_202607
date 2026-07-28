@@ -82,13 +82,38 @@ body {
 
 .hero-subtitle {
   margin: 0;
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: clamp(1.7rem, 2.6vw, 2.25rem);
   letter-spacing: 0.3em;
   margin-top: 0.4rem;
   color: var(--bg);
   max-width: 760px;
   position: relative;
   z-index: 1;
+}
+
+/* 簡報人與日期放在裱框之外,不去擠壓框內標題的留白。
+   框外底色是淺色漸層,所以文字改用深綠而非框內的暖白。 */
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  margin-top: 2.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-meta-item {
+  font-family: var(--font-sans);
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+  letter-spacing: 0.22em;
+  color: var(--accent);
+}
+
+.hero-meta-item + .hero-meta-item {
+  padding-left: 1.4rem;
+  border-left: 1px solid var(--gold);
 }
 
 .story-section {
@@ -483,7 +508,8 @@ body {
 
 #term-architect-2 .topic-gallery,
 #term-architect-3 .topic-gallery,
-#bund-source-photos .topic-gallery {
+#bund-source-photos .topic-gallery,
+#bund-source-photos-2 .topic-gallery {
   width: min(1280px, 100%);
   gap: 1.5rem;
 }
@@ -500,6 +526,19 @@ body {
   height: auto;
   max-width: 100%;
   max-height: calc(100vh - 14rem);
+  justify-self: center;
+}
+
+/* 這頁兩張圖是 1:1 與 3:4,一樣不裁切,但額外要求等高。
+   作法是給死 height、寬度留 auto —— img 會依原始比例自己算出寬度,
+   所以元素框仍等於實際算繪的圖,金線照樣貼合,不會 contain 出留白。
+   height 刻意壓在欄寬之內(1280px 兩欄扣 gap 約 628px):一旦算出的寬度
+   超出欄位,max-width 會反過來夾住寬度,高度就跟著縮,兩張又不齊了。 */
+#bund-source-photos-2 .topic-image {
+  object-fit: contain;
+  width: auto;
+  height: min(56vh, 540px);
+  max-width: 100%;
   justify-self: center;
 }
 
@@ -571,6 +610,17 @@ body {
 @media (max-width: 768px) {
   .villa-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* 兩項會換行,分隔線會變成孤懸在第二行左側的一截,所以收掉改用垂直間距 */
+  .hero-meta {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .hero-meta-item + .hero-meta-item {
+    padding-left: 0;
+    border-left: 0;
   }
 
   .gallery-image {
