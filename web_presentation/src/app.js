@@ -179,8 +179,8 @@ export default class App {
           '建築語言': '法國古典主義與折衷風格的融合；彩色玻璃與牆磚全由歐洲進口'
         },
         links: [
-          { url: 'https://www.youtube.com/watch?v=ZbX73-QJ_UE' },
-          { url: 'https://www.youtube.com/watch?v=cuLSbyPzdjQ' }
+          { url: 'https://www.youtube.com/watch?v=ZbX73-QJ_UE', label: '榮宅花磚' },
+          { url: 'https://www.youtube.com/watch?v=cuLSbyPzdjQ', label: '王家衛介紹' }
         ]
       },
       {
@@ -270,7 +270,7 @@ export default class App {
           '建築語言': '以西班牙式為主，混合意大利文藝復興與巴洛克元素的折衷手法'
         },
         links: [
-          { url: 'https://www.youtube.com/watch?v=huvNe0zRpkQ' }
+          { url: 'https://www.youtube.com/watch?v=huvNe0zRpkQ', label: '孫科別墅展覽' }
         ]
       },
       {
@@ -301,7 +301,7 @@ export default class App {
           '建築語言': '現代主義風格，局部帶裝飾藝術特徵，具流線型（Streamline Moderne）意象'
         },
         links: [
-          { url: 'https://www.youtube.com/watch?v=ikIKChSjE1c&t=1s' }
+          { url: 'https://www.youtube.com/watch?v=ikIKChSjE1c&t=1s', label: '吳同文住宅：上海第一豪宅' }
         ]
       },
       {
@@ -494,7 +494,7 @@ export default class App {
                 '<div class="toc-image-frame">' +
                   '<img class="toc-image" src="' + asset('images/content_image.jpg') + '" alt="Shanghai villa reference image" />' +
                   '<a class="toc-image-link" href="https://www.youtube.com/shorts/nDBkDvbwFqI" target="_blank" rel="noopener noreferrer">' +
-                    '<span>參考影片</span>' +
+                    '<span>longchamp: 上海常見景點</span>' +
                   '</a>' +
                 '</div>' +
               '</div>' +
